@@ -1,34 +1,24 @@
 import Player from '@vimeo/player';
 import lodash from 'lodash.throttle';
 
-
+// НЕ РОЗУМІЮ ЯК КОРИСТУВАТИСЯ БІБЛІОТЕКОЮ
 const iframe = document.querySelector('iframe');
-    const player = new Player(iframe);
+const player = new Player(iframe);
 
-    player.on('timeupdate', function() {
-        console.log('played the video!');
-    });
+player.on('play', function() {
+    console.log('played the video!');
+});
 
-    player.getVideoTitle().then(function(title) {
-        console.log('title:', title);
-    });
-    const onPlay = function(data) {
-        localStorage.setItem("videoplayer-current-time", value)
-    };
-    
-    player.on('timeupdate', onPlay);
+player.getVideoTitle().then(function(title) {
+    console.log('title:', title);
+});
 
+const onPlay = function() {
+   localStorage.setItem("videoplayer-current-time", +seconds)
+};
 
-    player.setCurrentTime(30.456).then(function(seconds) {
-        
-    }).catch(function(error) {
-        switch (error.name) {
-            case 'RangeError':
-               
-                break;
-    
-            default:
-                
-                break;
-        }
-    });
+player.on('timeupdate', onPlay);
+
+player.setCurrentTime(30.456).then(function(seconds) {
+   
+})
