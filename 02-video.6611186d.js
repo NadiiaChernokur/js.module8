@@ -224,6 +224,7 @@ if(!window.VimeoCheckedUrlTimeParam){window.VimeoCheckedUrlTimeParam=!0;var t=fu
  * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
- *//** Used as the `TypeError` message for "Functions" methods. */var J="object"==typeof a&&a&&a.Object===Object&&a,X="object"==typeof self&&self&&self.Object===Object&&self;J||X||Function("return this")(),Object.prototype.toString;const $=document.querySelector("iframe"),K=new B($);K.on("timeupdate",function(){console.log("played the video!")}),K.getVideoTitle().then(function(e){console.log("title:",e)}),K.on("timeupdate",function(e){localStorage.setItem("videoplayer-current-time",value)}),K.setCurrentTime(30.456).then(function(e){}).catch(function(e){e.name});//# sourceMappingURL=02-video.9c23eb73.js.map
+ *//** Used as the `TypeError` message for "Functions" methods. */var J="object"==typeof a&&a&&a.Object===Object&&a,X="object"==typeof self&&self&&self.Object===Object&&self;J||X||Function("return this")(),Object.prototype.toString;// НЕ РОЗУМІЮ ЯК КОРИСТУВАТИСЯ БІБЛІОТЕКОЮ
+const $=document.querySelector("iframe"),K=new B($);K.on("play",function(){console.log("played the video!")}),K.getVideoTitle().then(function(e){console.log("title:",e)}),K.on("timeupdate",function(){localStorage.setItem("videoplayer-current-time",+seconds)}),K.setCurrentTime(30.456).then(function(e){});//# sourceMappingURL=02-video.6611186d.js.map
 
-//# sourceMappingURL=02-video.9c23eb73.js.map
+//# sourceMappingURL=02-video.6611186d.js.map
