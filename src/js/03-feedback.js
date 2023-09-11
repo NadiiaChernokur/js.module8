@@ -23,18 +23,20 @@ function rebootPage() {
     const getItemTextParse = JSON.parse(getItemText);
 
     if(getItemText) {
-        return textarea.value = getItemTextParse.Message 
+        const getEmail = email.value = getItemTextParse.Email;
+       const getMessege = textarea.value = getItemTextParse.Message
+        // return textarea.value = getItemTextParse.Message 
+        return;
     }
-    //try {
-    //     return getItemText === null ? undefined : getItemTextParse;
-    //   } catch (error) {
-    //     console.error("Get state error: ", error.message);
-    //   }
 };
 
 function clickSubmit(e) {
     e.preventDefault();
-    const formData = {
+
+    if (email.value === "" || textarea.value === ""){
+        return alert("Всі поля повинні бути заповнені");
+      } 
+      const formData = {
         Email: email.value,
         Message: textarea.value
     };
