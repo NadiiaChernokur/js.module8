@@ -153,14 +153,10 @@
 return void 0===l||n>=t||n<0||s&&i>=a}function h(){var e,n,i,o=b();if(j(o))return w(o);// Restart the timer.
 f=setTimeout(h,(e=o-l,n=o-c,i=t-e,s?p(i,a-n):i))}function w(e){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(f=void 0,v&&i)?m(e):(i=r=void 0,u))}function O(){var e,n=b(),o=j(n);if(i=arguments,r=this,l=n,o){if(void 0===f)return(// Reset any `maxWait` timer.
+(f=void 0,v&&i)?m(e):(i=r=void 0,u))}function E(){var e,n=b(),o=j(n);if(i=arguments,r=this,l=n,o){if(void 0===f)return(// Reset any `maxWait` timer.
 c=e=l,// Start the timer for the trailing edge.
 f=setTimeout(h,t),d?m(e):u);if(s)return(// Handle invocations in a tight loop.
-f=setTimeout(h,t),m(l))}return void 0===f&&(f=setTimeout(h,t)),u}return t=S(t)||0,g(n)&&(d=!!n.leading,a=(s="maxWait"in n)?y(S(n.maxWait)||0,t):a,v="trailing"in n?!!n.trailing:v),O.cancel=function(){void 0!==f&&clearTimeout(f),c=0,i=l=r=f=void 0},O.flush=function(){return void 0===f?u:w(b())},O}(e,t,{leading:i,maxWait:t,trailing:r})};var j=document.querySelector(".feedback-form"),h=j.querySelector("[name='email']"),w=j.querySelector("[name='message']"),O=j.querySelector("[type='submit']");j.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(e){e.preventDefault();var t={Email:h.value,Message:w.value};localStorage.setItem("feedback-form-state",JSON.stringify(t))},500)),window.addEventListener("load",function(){var e=localStorage.getItem("feedback-form-state"),t=JSON.parse(e);if(e)return w.value=t.Message;//try {
-//     return getItemText === null ? undefined : getItemTextParse;
-//   } catch (error) {
-//     console.error("Get state error: ", error.message);
-//   }
-}),O.addEventListener("click",function(e){e.preventDefault(),console.log({Email:h.value,Message:w.value}),h.value="",w.value="",localStorage.removeItem("feedback-form-state")})}();//# sourceMappingURL=03-feedback.2005f74f.js.map
+f=setTimeout(h,t),m(l))}return void 0===f&&(f=setTimeout(h,t)),u}return t=S(t)||0,g(n)&&(d=!!n.leading,a=(s="maxWait"in n)?y(S(n.maxWait)||0,t):a,v="trailing"in n?!!n.trailing:v),E.cancel=function(){void 0!==f&&clearTimeout(f),c=0,i=l=r=f=void 0},E.flush=function(){return void 0===f?u:w(b())},E}(e,t,{leading:i,maxWait:t,trailing:r})};var j=document.querySelector(".feedback-form"),h=j.querySelector("[name='email']"),w=j.querySelector("[name='message']"),E=j.querySelector("[type='submit']");j.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(e){e.preventDefault();var t={Email:h.value,Message:w.value};localStorage.setItem("feedback-form-state",JSON.stringify(t))},500)),window.addEventListener("load",function(){var e=localStorage.getItem("feedback-form-state"),t=JSON.parse(e);if(e){h.value=t.Email,w.value=t.Message;// return textarea.value = getItemTextParse.Message 
+return}}),E.addEventListener("click",function(e){if(e.preventDefault(),""===h.value||""===w.value)return alert("Всі поля повинні бути заповнені");console.log({Email:h.value,Message:w.value}),h.value="",w.value="",localStorage.removeItem("feedback-form-state")})}();//# sourceMappingURL=03-feedback.83e60241.js.map
 
-//# sourceMappingURL=03-feedback.2005f74f.js.map
+//# sourceMappingURL=03-feedback.83e60241.js.map
